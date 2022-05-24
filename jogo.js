@@ -4,6 +4,22 @@ var largura = 0
 var vidas = 1
 var tempo = 10
 
+var criaMoscaTempo = 1700
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+	//1700
+	criaMoscaTempo = 1700
+} else if (nivel === 'dificil') {
+	//1000
+	criaMoscaTempo = 1000
+} else if (nivel === 'senin') {
+	//750
+	criaMoscaTempo = 750
+}
+
 function ajustaTamanhoPalcoJogo(){
 	 altura = window.innerHeight 
      largura = window.innerWidth
